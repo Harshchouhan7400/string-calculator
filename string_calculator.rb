@@ -4,6 +4,6 @@ class StringCalculator
   end
 
   def sum_of_numbers
-    return 0 if @number_string.empty?
+    return 0 if @string_numbers.empty?
   end
 end
