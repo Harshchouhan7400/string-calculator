@@ -12,5 +12,10 @@ RSpec.describe StringCalculator do
       string_calculator = StringCalculator.new("1")
       expect(string_calculator.sum_of_numbers).to eq(1)
     end
+
+    it "returns the sum of comma-separated numbers" do
+      string_calculator = StringCalculator.new("1,5")
+      expect(string_calculator.sum_of_numbers).to eq(6)
+    end
   end
 end
