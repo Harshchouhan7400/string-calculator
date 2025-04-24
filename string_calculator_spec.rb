@@ -27,5 +27,10 @@ RSpec.describe StringCalculator do
         string_calculator = StringCalculator.new("1\n2,3\n4")
         expect(string_calculator.sum_of_numbers).to eq(10)
     end
+
+    it "handles different delimiters with newline and returns their sum" do
+      string_calculator = StringCalculator.new("//;\n1;2")
+      expect(string_calculator.sum_of_numbers).to eq(3)
+    end
   end
 end
