@@ -35,7 +35,7 @@ RSpec.describe StringCalculator do
 
     it "throws an error when the string includes negative numbers" do
       string_calculator = StringCalculator.new("//;\n1;2;-9")
-      expect { string_calculator.sum_of_numbers }.to raise_error("negative numbers not allowed: -9")
+      expect { string_calculator.sum_of_numbers }.to raise_error("negative numbers are not allowed: -9")
     end
   end
 end

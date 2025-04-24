@@ -6,6 +6,9 @@ class StringCalculator
   def sum_of_numbers
     return 0 if @string_numbers.empty?
 
+    negative_numbers =  @string_numbers.scan(/-\d+/)
+    raise "negative numbers are not allowed: #{negative_numbers.join(', ')}" if negative_numbers.any?
+
     @string_numbers.to_i
     delimiter = handle_custom_delimiter
     @string_numbers.split(delimiter).map(&:to_i).sum
